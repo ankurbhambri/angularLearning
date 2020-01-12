@@ -1,0 +1,9 @@
+<input type="text" class="form-control box" id="inputbox" name="name" [(ngModel)]="serverName">
+
+<h2>Sever Configuration</h2>
+
+<p>{{serverName}}</p>
+<p>{{serverPid}}</p>
+<p>{{serverStatus}}</p>
+
+<button (click)="toggleButton()">Change Status</button>

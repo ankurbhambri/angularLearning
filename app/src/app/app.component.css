@@ -1,0 +1,13 @@
+.wrapper {
+    text-align: center;
+}
+.box{
+    margin: auto; 
+    border:1px solid lightblue;
+    width: 50%;
+}
+button{
+    margin: auto;
+    margin-left: 500px;
+    margin-top: 10px;
+}

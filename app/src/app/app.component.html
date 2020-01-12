@@ -1,0 +1,27 @@
+<div class="container">
+  <form>
+    <div class="form-group">
+      <h1 class="text-center text-primary" style="margin-top: 30px;">Learning Angular</h1>
+      <div>
+        <input type="text" class="form-control box" id="inputbox" name="name" [(ngModel)]="title"><button class="btn btn-primary button" (click)="funct1()" [disabled]="title=== ''">Submit</button>
+      </div>
+    </div>
+  </form>
+
+  <div>
+    <select [(ngModel)]="value" (click)="funct2()">
+      <option *ngFor="let item of data">{{item.name}}</option>
+    </select>
+  </div>
+  <app-radio></app-radio>
+  <app-toggle></app-toggle>
+
+  <p [style.display]="'block'">
+    Expression sets display to "block".
+    This paragraph is visible.
+  </p>
+  <p [style.display]="'none'">
+    Expression sets display to "none".
+    This paragraph is hidden but still in the DOM.
+  </p>
+</div>
