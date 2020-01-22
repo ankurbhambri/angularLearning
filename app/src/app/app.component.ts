@@ -9,6 +9,9 @@ export class AppComponent {
 
   title;
   value;
+  flag=true;
+  name = ''
+  count=0;
 
   data = [
     {id: 0, name: 'Health'},
@@ -29,4 +32,26 @@ export class AppComponent {
     }
   }
 
+  toggleFlag(){
+
+    this.flag  = !this.flag;
+    return this.flag;
+  }
+
+  array = ['Ankur', 'VIkas'];
+  add()
+  {
+    debugger;
+    this.array.push(this.name);
+  }
+
+  funct5(){
+    this.count++;
+  }
+
+  changeColor(){
+    if(this.count===5){
+      return 'green'
+    }
+  }
 }

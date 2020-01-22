@@ -3,7 +3,8 @@
     <div class="form-group">
       <h1 class="text-center text-primary" style="margin-top: 30px;">Learning Angular</h1>
       <div>
-        <input type="text" class="form-control box" id="inputbox" name="name" [(ngModel)]="title"><button class="btn btn-primary button" (click)="funct1()" [disabled]="title=== ''">Submit</button>
+        <input type="text" class="form-control box" id="inputbox" name="name" [(ngModel)]="title"><button
+          class="btn btn-primary button" (click)="funct1()" [disabled]="title=== ''">Submit</button>
       </div>
     </div>
   </form>
@@ -15,13 +16,19 @@
   </div>
   <app-radio></app-radio>
   <app-toggle></app-toggle>
+  <div>
+    <p *ngIf="flag; else elseblock">Flag is true</p>
+    <ng-template #elseblock>Flag is not true</ng-template>
+    <button (click)="toggleFlag()">Change</button>
+  </div>
 
-  <p [style.display]="'block'">
-    Expression sets display to "block".
-    This paragraph is visible.
-  </p>
-  <p [style.display]="'none'">
-    Expression sets display to "none".
-    This paragraph is hidden but still in the DOM.
-  </p>
-</div>
+  <div>
+    <input type="text" placeholder="name" [(ngModel)]="name">
+    <button (click)="add()">ADD</button>
+    <li *ngFor="let item of array">{{item}}</li>
+  </div>
+
+  <div>
+    <p *ngIf="count === 5">{{count}}</p>
+    <button (click)="funct5()" [ngStyle]="{color: changeColor()}">Change COlor after 5 clicks</button>
+  </div>

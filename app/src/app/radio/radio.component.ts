@@ -13,11 +13,11 @@ export class RadioComponent implements OnInit {
 
   funct3(event){
     this.label = event.target.value
-    if(event.target.value=='Life'){
-    console.log(event.target.value)
-    console.log('Rssb')
+    // if(event.target.value=='Life'){
+    // console.log(event.target.value)
+    // console.log('Rssb')
     }
-  }
+  
 
   ngOnInit() {
   }
